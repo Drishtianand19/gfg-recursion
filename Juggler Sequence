@@ -1,0 +1,21 @@
+class Solution{
+    static List<Integer> jugglerSequence(int N){
+        List<Integer> list=new ArrayList<Integer>();
+        int a=N;
+        list.add(a);
+        while(a!=1){
+            if(a%2==0){
+                 a = (int) Math.floor(Math.sqrt(a));
+            }else{
+                 a = (int) Math.floor(Math.pow(a,1.5));
+            }
+            list.add(a);
+            
+        }
+        return list;
+        
+        
+        
+       
+    }
+}
