@@ -1,0 +1,23 @@
+class Solution{
+    static void gfSeries(int N){
+        for(int i=1;i<=N;i++){
+            
+            System.out.print(series(i)+" ");
+            
+        }
+        
+         System.out.println();
+        
+    }
+    static long series(long n){
+        if(n==1){
+            return 0;
+        }
+        if(n==2){
+            return 1;
+        }
+        long res = series(n-2);
+        long b=res*res-series(n-1);
+        return b;
+    }
+}
